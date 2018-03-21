@@ -166,7 +166,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
       */
      public function getSalt()
      {
-         // TODO: Implement getSalt() method.
+         return null;
      }
 
      /**
@@ -176,7 +176,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
       */
      public function getUsername()
      {
-         // TODO: Implement getUsername() method.
+         return $this->getMail();
      }
 
      /**
@@ -187,6 +187,6 @@ use Symfony\Component\Security\Core\User\UserInterface;
       */
      public function eraseCredentials()
      {
-         // TODO: Implement eraseCredentials() method.
+        return null;
      }
  }

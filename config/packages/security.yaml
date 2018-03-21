@@ -4,12 +4,24 @@ security:
         App\Entity\Users: bcrypt
     providers:
         in_memory: { memory: ~ }
+        users_provider:
+            entity:
+                class: App\Entity\Users
+                property: mail
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
             anonymous: true
+            form_login:
+              login_path: security_connexion
+              check_path: security_connexion
+            http_basic: ~
+            provider: users_provider
+            logout:
+              path: /deconnexion
+              target: /
 
             # activate different ways to authenticate
 

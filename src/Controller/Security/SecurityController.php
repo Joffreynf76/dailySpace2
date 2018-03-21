@@ -11,9 +11,32 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends Controller
 {
+
+
+    /**
+     * Connexion d'un utilisateur
+     * @Route("/connexion", name="security_connexion")
+     * @param Request $request
+     * @param AuthenticationUtils $authenticationUtils
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function connexion(Request $request, AuthenticationUtils $authenticationUtils)
+    {
+        # Récupération du message d'erreur s'il y en a un.
+        $error = $authenticationUtils->getLastAuthenticationError();
+
+        // last username entered by the user
+        $lastMail = $authenticationUtils->getLastUsername();
+
+        return $this->render('Connexion/connexion.html.twig', array(
+            'last_mail'    => $lastMail,
+            'error'         => $error,
+        ));
+    }
     /**
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
