@@ -3,6 +3,7 @@
 namespace App\Controller\dailySpace;
 
 
+use App\Entity\Article;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -13,14 +14,15 @@ class IndexController extends Controller
      * @Route("/accueil")
      */
    public function index(){
-       return $this->render('index/index.html.twig');
+       $article=$this->getDoctrine()->getRepository(Article::class)->findAll();
+       return $this->render('index/index.html.twig.',['articles'=>$article]);
    }
 
     /**
      * @Route("/categorie/{libelle}",methods={"GET"})
      */
    public function categorie($libelle='test'){
-       return $this->render('index/categorie.html.twig');
+       return $this->render('index/categorie.html.twig.');
 
 
    }
@@ -32,6 +34,6 @@ class IndexController extends Controller
      * @Route("/article/{article}",methods={"GET"})
      */
    public function article($article='test2'){
-        return $this->render('index/article.html.twig');
+        return $this->render('index/article.html.twig.');
    }
 }
