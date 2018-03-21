@@ -43,6 +43,12 @@ class Users
      */
     private $roles;
 
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\UserArticle",mappedBy="users")
+     */
+    private $usersArticle;
+
     public function getId()
     {
         return $this->id;
@@ -132,4 +138,22 @@ class Users
     {
         $this->id=$id;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getUsersArticle()
+    {
+        return $this->usersArticle;
+    }
+
+    /**
+     * @param mixed $userArticle
+     */
+    public function setUsersArticle($usersArticle): void
+    {
+        $this->usersArticle = $usersArticle;
+    }
+
+
 }

@@ -47,6 +47,17 @@ class Article
      */
     private $categorie;
 
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\UserArticle",inversedBy="article")
+     */
+    private $users;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\UserArticle",mappedBy="article2")
+     */
+    private $usersArticle;
+
     /**
      * @return mixed
      */
@@ -138,5 +149,39 @@ class Article
     {
         $this->id = $id;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getUsers()
+    {
+        return $this->users;
+    }
+
+    /**
+     * @param mixed $users
+     */
+    public function setUsers($users): void
+    {
+        $this->users = $users;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUsersArticle()
+    {
+        return $this->usersArticle;
+    }
+
+    /**
+     * @param mixed $usersArticle
+     */
+    public function setUsersArticle($usersArticle): void
+    {
+        $this->usersArticle = $usersArticle;
+    }
+
+
 
 }
