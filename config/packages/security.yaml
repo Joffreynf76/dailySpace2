@@ -15,13 +15,13 @@ security:
         main:
             anonymous: true
             form_login:
-              login_path: security_connexion
-              check_path: security_connexion
+                login_path: security_connexion
+                check_path: security_connexion
             http_basic: ~
             provider: users_provider
             logout:
-              path: /deconnexion
-              target: /
+                path: /deconnexion
+                target: /
 
             # activate different ways to authenticate
 

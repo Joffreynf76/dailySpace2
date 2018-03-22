@@ -44,8 +44,7 @@ class SecurityController extends Controller
      */
     public function inscription(Request $request, UserPasswordEncoderInterface $passwordEncoder){
         $users = new Users();
-        $roles= $this->getDoctrine()->getRepository(Roles::class)->find(2);
-        $users->setRoles($roles);
+        $users->setRoles('ROLE_USERS');
 
         $form=$this->createForm(UsersType::class,$users);
 

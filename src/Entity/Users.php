@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -34,13 +35,13 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 
     /**
-     * @ORM\Column(type="string",length=40)
+     * @ORM\Column(type="string",length=4096)
      */
     private $password;
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Roles",inversedBy="users")
+     * @ORM\Column(type="array")
      */
     private $roles;
 
@@ -124,7 +125,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
      */
     public function getRoles()
     {
-        return $this->roles;
+        return [$this->roles];
     }
 
     /**
@@ -189,4 +190,6 @@ use Symfony\Component\Security\Core\User\UserInterface;
      {
         return null;
      }
+
+
  }
