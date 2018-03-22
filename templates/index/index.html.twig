@@ -2,3 +2,11 @@
 {% for article in articles %}
 <p>{{ article.titre }}</p>
 {% endfor %}
+
+{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    <li><a href="{{ url('deconnexion') }}">Déconnexion</a></li>
+{% else %}
+    <li><a href="{{ url('security_connexion') }}">Connexion</a></li>
+    <li><a href="{{ url ('inscription') }}">Inscription</a></li>
+
+{% endif %}
