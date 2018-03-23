@@ -4,6 +4,7 @@ namespace App\Controller\dailySpace;
 
 
 use App\Entity\Article;
+use App\Entity\Evenement;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -43,5 +44,11 @@ class IndexController extends Controller
      */
    public function monCompte(){
        return $this->render('Compte/compte.html.twig');
+   }
+
+
+   public function sidebar(){
+       $evenements=$this->getDoctrine()->getRepository(Evenement::class)->findAll();
+       return $this->render('components/sidebar.html.twig',['evenements'=>$evenements]);
    }
 }
