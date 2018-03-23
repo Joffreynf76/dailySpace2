@@ -15,14 +15,14 @@ class IndexController extends Controller
      */
    public function index(){
        $article=$this->getDoctrine()->getRepository(Article::class)->findAll();
-       return $this->render('index/index.html.twig.',['articles'=>$article]);
+       return $this->render('index/index.html.twig',['articles'=>$article]);
    }
 
     /**
      * @Route("/categorie/{libelle}",methods={"GET"})
      */
    public function categorie($libelle='test'){
-       return $this->render('index/categorie.html.twig.');
+       return $this->render('index/categorie.html.twig');
 
 
    }
@@ -34,6 +34,14 @@ class IndexController extends Controller
      * @Route("/article/{article}",methods={"GET"})
      */
    public function article($article='test2'){
-        return $this->render('index/article.html.twig.');
+        return $this->render('index/article.html.twig');
+   }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/monCompte",name="compte")
+     */
+   public function monCompte(){
+       return $this->render('Compte/compte.html.twig');
    }
 }

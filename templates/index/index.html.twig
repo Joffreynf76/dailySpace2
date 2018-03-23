@@ -4,6 +4,7 @@
 {% endfor %}
 
 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    <li><a href="{{ url('compte') }}">Mon compte</a></li>
     <li><a href="{{ url('deconnexion') }}">Déconnexion</a></li>
 {% else %}
     <li><a href="{{ url('security_connexion') }}">Connexion</a></li>
