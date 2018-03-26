@@ -55,4 +55,11 @@ class ArticleRepository extends ServiceEntityRepository
             ->getResult()
             ;
     }
+
+    public function spotlight(){
+    return $this->createQueryBuilder('a')
+        ->where('a.spotlight=1')
+        ->getQuery()
+        ->getResult();
+    }
 }

@@ -1,1 +1,10 @@
 <h1>Page catégorie</h1>
+<ul>
+{% for categorie in categories %}
+    <li><a href="#">{{ categorie.libelle }}</a></li>
+    {% endfor %}
+</ul>
+<h3>Les articles du moment</h3>
+{% for spotlights in spotlight %}
+<p>{{ spotlights.titre }}</p>
+{% endfor %}
