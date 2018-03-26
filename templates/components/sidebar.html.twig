@@ -4,6 +4,11 @@
         <div class="info-user">Infos Utilisateur{% if is_granted('IS_AUTHENTICATED_FULLY') %}
             <p>{{ app.user.mail }}</p>
             <p>{{ app.user.nom }} {{ app.user.prenom }}</p>
+            {% if is_granted('ROLE_ADMIN') %}
+                <li><a href="{{ path('add_article') }}">Ajouter un article</a></li>
+                <li><a href="{{ path('add_event') }}">Ajouter un évenement</a></li>
+                {% endif %}
+            <li><a href="{{ path('deconnexion') }}">Déconnexion</a></li>
         {% else %}
             <li><a href="{{ url('security_connexion') }}">Connexion</a></li>
             <li><a href="{{ url ('inscription') }}">Inscription</a></li>

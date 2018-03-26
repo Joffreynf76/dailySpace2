@@ -52,7 +52,7 @@ class IndexController extends Controller
    }
 
     /**
-     * @Route("{libelle}",name="index_selectCategorie",methods={"GET"})
+     * @Route("/categorie/{libelle}",name="index_selectCategorie",methods={"GET"})
      */
    public function selectCategorie($libelle='test'){
        $categorie=$this->getDoctrine()->getRepository(Categorie::class)->findOneBy(['libelle'=>$libelle]);
@@ -64,7 +64,7 @@ class IndexController extends Controller
     /**
      * @param string $article
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route("{libelle}/{slugarticle}_{id}.html",name="index_article",requirements={"id"="\d+"},methods={"GET"})
+     * @Route("/{libelle}/{slugarticle}_{id}.html",name="index_article",requirements={"id"="\d+"},methods={"GET"})
      */
    public function article(Article $article, Request $request){
        $commentaire = new Commentaire();
