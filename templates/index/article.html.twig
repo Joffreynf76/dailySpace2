@@ -1,4 +1,11 @@
-<h1>Page article</h1>
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+    <h1>{{ article.titre}}</h1>
+
+<p>{{ article.contenu }}</p>
+
 
 <div class="row">
     <div class="col-xs-10 col-xs-offset-1">
@@ -6,7 +13,7 @@
               enctype="multipart/form-data">
             <h3>Ajouter un commentaire</h3>
 
-            {# Titre de l'evenement #}
+
             <div class="form-group">
                 <label class="col-md-2 control-label"></label>
                 <div class="col-md-8">
@@ -14,7 +21,7 @@
                 </div>
             </div>
 
-            {# Submit #}
+             Submit
             <div class="form-group">
                 <div class="col-xs-7 col-xs-offset-3">
                     {{ form_end(form) }}
@@ -24,3 +31,5 @@
         </form>
     </div>
 </div>
+
+{% endblock %}

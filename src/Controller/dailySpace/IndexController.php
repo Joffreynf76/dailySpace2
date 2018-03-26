@@ -5,15 +5,19 @@ namespace App\Controller\dailySpace;
 
 use App\Entity\Article;
 use App\Entity\Categorie;
+use App\Entity\Commentaire;
 use App\Entity\Evenement;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class IndexController extends Controller
 {
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route("/accueil")
+     * @Route("/accueil",name="index_accueil")
      */
    public function index(){
        $article=$this->getDoctrine()->getRepository(Article::class)->findAll();
@@ -48,20 +52,44 @@ class IndexController extends Controller
    }
 
     /**
-     * @Route("categorie/{libelle}"
+     * @Route("{libelle}",name="index_selectCategorie",methods={"GET"})
      */
-   public function selectCategorie($libelle=''){
+   public function selectCategorie($libelle='test'){
        $categorie=$this->getDoctrine()->getRepository(Categorie::class)->findOneBy(['libelle'=>$libelle]);
+       $article=$categorie->getArticles();
+       return $this->render('index/selectCategorie.html.twig',['articles'=>$article]);
    }
 
 
     /**
      * @param string $article
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route("/article/{article}",methods={"GET"})
+     * @Route("{libelle}/{slugarticle}_{id}.html",name="index_article",requirements={"id"="\d+"},methods={"GET"})
      */
-   public function article($article='test2'){
-        return $this->render('index/article.html.twig');
+   public function article(Article $article, Request $request){
+       $commentaire = new Commentaire();
+
+       $form= $this->createFormBuilder($commentaire)
+           ->add('contenu',TextareaType::class,[
+               'attr'=>[
+                   'placeholder'=>'Votre commentaire'
+               ]
+           ])
+           ->add('submit',SubmitType::class,[
+               'label'=>'Commenter'
+           ])
+           ->getForm();
+       $form->handleRequest($request);
+       if($form->isSubmitted()&& $form->isValid()){
+           $commentaire=$form->getData();
+           $em=$this->getDoctrine()->getManager();
+           $em->persist($commentaire);
+           $em->flush();
+       }
+       return $this->render('index/article.html.twig',[
+           'form'=>$form->createView(),'article'=>$article
+       ]);
+       // return $this->render('index/article.html.twig',['article'=>$article]);
    }
 
     /**
@@ -77,4 +105,34 @@ class IndexController extends Controller
        $evenements=$this->getDoctrine()->getRepository(Evenement::class)->findLastfive();
        return $this->render('components/sidebar.html.twig',['evenements'=>$evenements]);
    }
+
+//    /**
+//     * @param Request $request
+//     * @return \Symfony\Component\HttpFoundation\Response
+//     * @Route("{libelle}/{slugarticle}_{id}.html",name="index_article",methods={"GET"})
+//     */
+//    public function addCommentaire(Request $request){
+//        $commentaire = new Commentaire();
+//
+//        $form= $this->createFormBuilder($commentaire)
+//            ->add('contenu',TextareaType::class,[
+//                'attr'=>[
+//                    'placeholder'=>'Votre commentaire'
+//                ]
+//            ])
+//            ->add('submit',SubmitType::class,[
+//                'label'=>'Commenter'
+//            ])
+//            ->getForm();
+//        $form->handleRequest($request);
+//        if($form->isSubmitted()&& $form->isValid()){
+//            $commentaire=$form->getData();
+//            $em=$this->getDoctrine()->getManager();
+//            $em->persist($commentaire);
+//            $em->flush();
+//       }
+//        return $this->render('index/article.html.twig',[
+//            'form'=>$form->createView()
+//       ]);
+//    }
 }
