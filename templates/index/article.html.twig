@@ -7,6 +7,9 @@
 <p>{{ article.contenu }}</p>
     <img alt="" src="{{ asset('images/'~article.image) }}">
 
+
+
+
 {% for commentaire in commentaires %}
     <p>{{ commentaire.contenu }}</p>
     {% endfor %}
