@@ -7,6 +7,8 @@ use App\Entity\Article;
 use App\Entity\Categorie;
 use App\Entity\Commentaire;
 use App\Entity\Evenement;
+use App\Entity\UserArticle;
+use App\Entity\Users;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -64,7 +66,7 @@ class IndexController extends Controller
     /**
      * @param string $article
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route("/{libelle}/{slugarticle}_{id}.html",name="index_article",requirements={"id"="\d+"},methods={"GET"})
+     * @Route("/{libelle}/{slugarticle}_{id}.html",name="index_article",requirements={"id"="\d+"},methods={"GET","POST"})
      */
    public function article(Article $article, Request $request){
        $commentaire = new Commentaire();
@@ -86,10 +88,12 @@ class IndexController extends Controller
            $em->persist($commentaire);
            $em->flush();
        }
+
+       $comments=$this->getDoctrine()->getRepository(Commentaire::class)->findAll();
        return $this->render('index/article.html.twig',[
-           'form'=>$form->createView(),'article'=>$article
+           'form'=>$form->createView(),'article'=>$article,'commentaires'=>$comments
        ]);
-       // return $this->render('index/article.html.twig',['article'=>$article]);
+
    }
 
     /**

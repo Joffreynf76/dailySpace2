@@ -50,7 +50,6 @@ class UsersRepository extends ServiceEntityRepository
     public function Users(){
         return $this->createQueryBuilder('a')
             ->select('a.mail')
-            ->where('a.roles= ROLE_USERS')
             ->getQuery()
             ->getResult()
             ;
