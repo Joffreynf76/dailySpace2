@@ -3,7 +3,7 @@
         <aside>
             <div class="espace-utilisateur">
 
-                <div class="info-user">Infos Utilisateur{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <div class="info-user">{% if is_granted('IS_AUTHENTICATED_FULLY') %}
                     <p>{{ app.user.mail }}</p>
                     <p>{{ app.user.nom }} {{ app.user.prenom }}</p>
                     {% if is_granted('ROLE_ADMIN') %}
@@ -13,8 +13,8 @@
                     {% endif %}
                     <li><a href="{{ path('deconnexion') }}">Déconnexion</a></li>
                     {% else %}
-                        <li><a href="{{ url('security_connexion') }}">Connexion</a></li>
-                    <li><a href="{{ url ('inscription') }}">Inscription</a></li>
+                        <a href="{{ url('security_connexion') }}"><button type="button" class="btn btn-secondary btn-lg btn-block">Connexion</button></a>
+                        <a href="{{ url ('inscription') }}"><button type="button" class="btn btn-secondary btn-lg btn-block">Inscription</button></a>
                     {% endif %}</div>
                 <div class="register"></div>
                 <div class="login-logout"></div>
@@ -22,14 +22,7 @@
 
                 </div>
             </div>
-            <div class="wrapper">
-                <div class="search-container">
-                    <a href="#/search" class="search-button">
-                        <i class="fa fa-search"></i>
-                    </a>
-                    <input type="text" placeholder="Votre recherche...">
-                </div>
-            </div>
+
             <div class="events">
                 <h3>Les prochains évenements</h3>
                     {% for evenement in evenements %}

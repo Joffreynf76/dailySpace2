@@ -3,12 +3,23 @@
     {{ app.request.get('categorie.libelle') | capitalize }}
 {% endblock %}
 {% block content %}
+    <div class="container">
 {% if articles is not empty %}
 {% for article in articles %}
-    <p><a href="{{ url('index_article',{'libelle': article.categorie.libelle |slugify,
-            'slugarticle':article.titre | slugify,
-            'id' : article.id |slugify })}}">{{ article.titre }}</a></p>
 
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="{{ asset('images/'~article.image) }}" alt="image article">
+            <div class="caption">
+                <h2>{{ article.titre }}</h2>
+
+                <p><a href="{{ url('index_article',{'libelle': article.categorie.libelle |slugify,
+                        'slugarticle':article.titre | slugify,
+                        'id' : article.id |slugify })}}" class="btn btn-primary" role="button">En savoir plus</a></p>
+            </div>
+        </div>
+
+    </div>
 
 
 
@@ -18,5 +29,5 @@
     <p>Aucun article pour le moment</p>
 
 {% endif %}
-
+    </div>
 {% endblock %}
