@@ -25,24 +25,28 @@ class UsersType extends AbstractType
         $builder
             ->add('nom',TextType::class,[
                 'required'=>true,
+                'label'=>false,
                 'attr'=>[
                     'placeholder'=>'Nom'
                 ]
             ])
             ->add('prenom',TextType::class,[
                 'required'=>true,
+                'label'=>false,
                 'attr'=>[
                     'placeholder'=>'Prénom'
                 ]
             ])
             ->add('mail',EmailType::class,[
                 'required'=>true,
+                'label'=>false,
                 'attr'=>[
                     'placeholder'=>'Adresse email'
                 ]
             ])
             ->add('password',PasswordType::class,[
                 'required'=>true,
+                'label'=>false,
                 'attr'=>[
                     'placeholder'=>'Mot de passe'
                 ]
