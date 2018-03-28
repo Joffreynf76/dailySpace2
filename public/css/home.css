@@ -524,6 +524,25 @@ footer p {
 }
 
 .thumbnail{
+    min-height: 300px;
     height: auto;
     margin-top: 30px;
+}
+
+.commentaire {
+    background-color: #EEEEEE;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.contenuArticle {
+    margin-top: 20px;
+}
+
+.titreArticle {
+    margin-bottom: 20px;
+}
+
+.titreComments {
+    margin-left: 20px;
 }
