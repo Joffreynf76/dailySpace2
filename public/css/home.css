@@ -546,3 +546,41 @@ footer p {
 .titreComments {
     margin-left: 20px;
 }
+.nom {
+    margin-bottom: 20px;
+}
+#users_nom {
+    width: 500px;
+    border-radius: 5px;
+}
+
+.prenom{
+    margin-bottom: 20px;
+}
+
+#users_prenom {
+    width: 500px;
+    border-radius: 5px;
+}
+
+.mail {
+    margin-bottom: 20px;
+}
+
+#users_mail{
+    width: 500px;
+    border-radius: 5px;
+}
+
+.password {
+    margin-bottom: 20px;
+}
+
+#users_password {
+    width: 300px;
+    border-radius: 5px;
+}
+
+#users_submit {
+    width:200px;
+}

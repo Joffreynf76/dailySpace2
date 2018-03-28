@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7950de9-7662-4569-8848-08b048cc4a5c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/favicon.ico" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Form/UsersType.php" afterPath="$PROJECT_DIR$/src/Form/UsersType.php" />
-      <change beforePath="$PROJECT_DIR$/templates/Connexion/connexion.html.twig" afterPath="$PROJECT_DIR$/templates/Connexion/connexion.html.twig" />
+      <change beforePath="$PROJECT_DIR$/public/css/home.css" afterPath="$PROJECT_DIR$/public/css/home.css" />
       <change beforePath="$PROJECT_DIR$/templates/Inscription/inscription.html.twig" afterPath="$PROJECT_DIR$/templates/Inscription/inscription.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/layout.html.twig" afterPath="$PROJECT_DIR$/templates/layout.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,8 +33,8 @@
       <file leaf-file-name="home.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/home.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="526" column="21" lean-forward="false" selection-start-line="526" selection-start-column="21" selection-end-line="526" selection-end-column="21" />
+            <state relative-caret-position="770">
+              <caret line="580" column="23" lean-forward="false" selection-start-line="580" selection-start-column="23" selection-end-line="580" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -46,8 +43,8 @@
       <file leaf-file-name="inscription.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/Inscription/inscription.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+            <state relative-caret-position="391">
+              <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
               <folding>
                 <element signature="e#12#28#0#Twig" expanded="true" />
               </folding>
@@ -146,11 +143,11 @@
         <option value="$PROJECT_DIR$/templates/components/sidebar.html.twig" />
         <option value="$PROJECT_DIR$/templates/index/systemeSolaire.html.twig" />
         <option value="$PROJECT_DIR$/templates/index/article.html.twig" />
-        <option value="$PROJECT_DIR$/public/css/home.css" />
         <option value="$PROJECT_DIR$/templates/index/selectCategorie.html.twig" />
         <option value="$PROJECT_DIR$/templates/Connexion/connexion.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/UsersType.php" />
         <option value="$PROJECT_DIR$/templates/layout.html.twig" />
+        <option value="$PROJECT_DIR$/public/css/home.css" />
         <option value="$PROJECT_DIR$/templates/Inscription/inscription.html.twig" />
       </list>
     </option>
@@ -402,7 +399,7 @@
       <workItem from="1521793029812" duration="19707000" />
       <workItem from="1522046062010" duration="28294000" />
       <workItem from="1522135065371" duration="24907000" />
-      <workItem from="1522221363589" duration="13905000" />
+      <workItem from="1522221363589" duration="16186000" />
     </task>
     <task id="LOCAL-00001" summary="base de donnée">
       <created>1521627545691</created>
@@ -516,11 +513,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522232068723</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="formulaire connexion">
+      <created>1522235387628</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1522235387628</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151013000" />
+    <option name="totallyTimeSpent" value="153294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -587,7 +591,8 @@
     <MESSAGE value="integration accueil et systeme solaire" />
     <MESSAGE value="integration" />
     <MESSAGE value="page article et categorie" />
-    <option name="LAST_COMMIT_MESSAGE" value="page article et categorie" />
+    <MESSAGE value="formulaire connexion" />
+    <option name="LAST_COMMIT_MESSAGE" value="formulaire connexion" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -912,14 +917,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="526" column="21" lean-forward="false" selection-start-line="526" selection-start-column="21" selection-end-line="526" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index/article.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
@@ -972,14 +969,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Article/ajouterarticle.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="60" column="22" lean-forward="false" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/UsersType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -988,10 +977,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Article/ajouterarticle.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="60" column="22" lean-forward="false" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="580" column="23" lean-forward="false" selection-start-line="580" selection-start-column="23" selection-end-line="580" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/Inscription/inscription.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        <state relative-caret-position="391">
+          <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
           <folding>
             <element signature="e#12#28#0#Twig" expanded="true" />
           </folding>
