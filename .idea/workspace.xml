@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7950de9-7662-4569-8848-08b048cc4a5c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/14592.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/space-background-gif.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/space-background-gif2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/wallhaven-623152.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/wallhaven-638675.jpg" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" />
-      <change beforePath="$PROJECT_DIR$/public/css/home.css" afterPath="$PROJECT_DIR$/public/css/home.css" />
-      <change beforePath="$PROJECT_DIR$/templates/index/index.html.twig" afterPath="$PROJECT_DIR$/templates/index/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/index/normandie.html.twig" afterPath="$PROJECT_DIR$/templates/index/normandie.html.twig" />
+      <change beforePath="$PROJECT_DIR$/templates/index/systemeSolaire.html.twig" afterPath="$PROJECT_DIR$/templates/index/systemeSolaire.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,51 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/css/home.css">
+      <file leaf-file-name="systemeSolaire.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/index/systemeSolaire.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="251" lean-forward="false" selection-start-line="10" selection-start-column="251" selection-end-line="10" selection-end-column="251" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="normandie.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index/normandie.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ajouterarticle.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Article/ajouterarticle.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="60" column="22" lean-forward="false" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sidebar.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/components/sidebar.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="inscription.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Inscription/inscription.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+            <state relative-caret-position="153">
+              <caret line="9" column="104" lean-forward="true" selection-start-line="9" selection-start-column="104" selection-end-line="9" selection-end-column="104" />
               <folding />
             </state>
           </provider>
@@ -138,19 +90,19 @@
         <option value="$PROJECT_DIR$/public/js/scroll_up.js" />
         <option value="$PROJECT_DIR$/templates/components/nav.html.twig" />
         <option value="$PROJECT_DIR$/templates/index/categorie.html.twig" />
-        <option value="$PROJECT_DIR$/templates/index/systemeSolaire.html.twig" />
         <option value="$PROJECT_DIR$/templates/index/selectCategorie.html.twig" />
         <option value="$PROJECT_DIR$/templates/Connexion/connexion.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/UsersType.php" />
         <option value="$PROJECT_DIR$/templates/layout.html.twig" />
         <option value="$PROJECT_DIR$/templates/Inscription/inscription.html.twig" />
-        <option value="$PROJECT_DIR$/templates/components/sidebar.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/dailySpace/IndexController.php" />
         <option value="$PROJECT_DIR$/templates/index/article.html.twig" />
         <option value="$PROJECT_DIR$/config/packages/twig.yaml" />
         <option value="$PROJECT_DIR$/templates/index/normandie.html.twig" />
         <option value="$PROJECT_DIR$/templates/index/index.html.twig" />
         <option value="$PROJECT_DIR$/public/css/home.css" />
+        <option value="$PROJECT_DIR$/templates/components/sidebar.html.twig" />
+        <option value="$PROJECT_DIR$/templates/index/systemeSolaire.html.twig" />
       </list>
     </option>
   </component>
@@ -362,7 +314,7 @@
       <workItem from="1522046062010" duration="28294000" />
       <workItem from="1522135065371" duration="24907000" />
       <workItem from="1522221363589" duration="19679000" />
-      <workItem from="1522309574099" duration="8091000" />
+      <workItem from="1522309574099" duration="9732000" />
     </task>
     <task id="LOCAL-00001" summary="base de donnée">
       <created>1521627545691</created>
@@ -504,11 +456,25 @@
       <option name="project" value="LOCAL" />
       <updated>1522241385761</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="modif css + derniere retouche">
+      <created>1522319365836</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1522319365836</updated>
+    </task>
+    <task id="LOCAL-00022" summary="retouche css">
+      <created>1522321769449</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1522321769449</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164878000" />
+    <option name="totallyTimeSpent" value="166519000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -578,7 +544,9 @@
     <MESSAGE value="formulaire connexion" />
     <MESSAGE value="formulaire inscription" />
     <MESSAGE value="projet fini" />
-    <option name="LAST_COMMIT_MESSAGE" value="projet fini" />
+    <MESSAGE value="modif css + derniere retouche" />
+    <MESSAGE value="retouche css" />
+    <option name="LAST_COMMIT_MESSAGE" value="retouche css" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -687,6 +655,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="715">
           <caret line="60" column="5" lean-forward="false" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -804,13 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index/systemeSolaire.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index/categorie.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -869,14 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Article/ajouterarticle.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="22" lean-forward="false" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/dailySpace/ArticleController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-267">
@@ -897,14 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/components/sidebar.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,10 +886,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/components/sidebar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Article/ajouterarticle.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="60" column="22" lean-forward="false" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index/normandie.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="807">
+          <caret line="541" column="16" lean-forward="false" selection-start-line="541" selection-start-column="16" selection-end-line="541" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -956,10 +926,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/home.css">
+    <entry file="file://$PROJECT_DIR$/templates/index/systemeSolaire.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="251" lean-forward="false" selection-start-line="10" selection-start-column="251" selection-end-line="10" selection-end-column="251" />
+        <state relative-caret-position="153">
+          <caret line="9" column="104" lean-forward="true" selection-start-line="9" selection-start-column="104" selection-end-line="9" selection-end-column="104" />
           <folding />
         </state>
       </provider>
