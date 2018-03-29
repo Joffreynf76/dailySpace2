@@ -323,6 +323,16 @@ article ul li {
     margin-bottom: 75px;
     width: 50%;
     float: left;
+    height: 200px;
+    text-align: center;
+
+}
+
+.site-partenaires {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    width: 50%;
+    float: left;
     height: 150px;
     text-align: center;
 
