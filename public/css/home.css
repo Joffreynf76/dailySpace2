@@ -7,7 +7,8 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background: linear-gradient(111.24892639023471deg, rgba(218, 218, 218,1) 5.533854166666667%,rgba(138, 138, 138,1) 96.67968749999999%);
+    /*background: linear-gradient(111.24892639023471deg, rgba(218, 218, 218,1) 5.533854166666667%,rgba(138, 138, 138,1) 96.67968749999999%);*/
+    background: linear-gradient(113.04725084522124deg, rgba(220, 227, 227,1) 10.734375%,rgba(252, 252, 252,1) 27.381944444444443%,rgba(204, 218, 227,1) 51.19184027777777%,rgba(163, 163, 163,1) 76.55034722222221%,rgba(54, 87, 194,1) 97.84374999999999%)
 }
 
 h3 {
@@ -57,51 +58,6 @@ nav ul:nth-child(2) {
     color: #E85837;
 }
 
-.dropdown-content {
-    float: right;
-    display: none;
-    margin: -95px;
-
-    z-index: 5;
-}
-.dropdown:hover .dropdown-content{
-    display: block;
-
-}
-.dropdown ul{
-    right: 0;
-    text-align: center;
-    width: 175px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background: #474C5A;
-    font-family: 'Amatic SC', cursive;
-    opacity: 0.75;
-}
-.dropdown ul::after{
-    content: '';
-    clear: both;
-    display: block;
-}
-.dropdown>ul>li {
-    float: left;
-    position: relative;
-}
-.dropdown-content a {
-    display: block;
-    color: #FFBC4B;
-    font-size: 2.5em;
-    opacity: 5;
-}
-.dropdown-content a:hover {
-    text-decoration: line-through;
-    padding: 0;
-    width: 100%;
-    color: #FFBC4B;
-    opacity: 3;
-}
-
 
 nav.black ul {
     background: #10141c;
@@ -130,6 +86,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #E85837;
+    text-decoration: none;
 }
 
 .menu-icon {
@@ -244,9 +201,10 @@ aside {
     border: 3px #10141c solid;
     border-radius: 4px;
     margin-bottom: 70px;
-    background: url("../../img/space-background-gif.jpg");
+    background: url("../images/space-background-gif.jpg");
     background-attachment: fixed;
-    background-size: cover;
+    background-size: contain;
+    background-position-y: -40px;
 }
 
 
@@ -270,55 +228,30 @@ aside {
     border: 3px #10141C solid;
     padding: 20px;
     margin-top: 10px;
+    background: url("../images/space-background-gif.jpg");
+    background-attachment: fixed;
+    background-size: contain;
 }
 
 .events h3 {
     margin-top: 0;
     text-align: center;
     line-height: 1em;
+    color: white;
 }
 
 .events h4 {
     margin-top: 0px;
     margin-left: 20px;
     font-size: 0.8em;
+    color:white;
 }
 
 .events p {
     margin-left: 20px;
     margin-bottom: 10px;
     font-family: 'IBM Plex Sans Condensed', sans-serif;
-}
-
-.articles-recents {
-    margin-top: 50px;
-    line-height: 30px;
-    border: 3px #10141C solid;
-    padding: 20px;
-    background-color: #10141C;
-    color: #fff;
-}
-
-.articles-recents h3 {
-    font-size: 2.5em;
-    text-align: center;
-    line-height: 1em;
-    font-weight: 300;
-    margin-top: 10px;
-}
-
-.articles-recents h4 {
-    margin-top: 0px;
-    margin-left: 20px;
-    font-size: 0.8em;
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
-}
-
-.articles-recents p {
-    margin-left: 20px;
-    margin-bottom: 10px;
-    font-size: 1.05em;
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    color: white;
 }
 
 article {
@@ -350,7 +283,7 @@ article ul li {
 
 .remerciements {
     width: 100%;
-    margin-top: 75px;
+    /*margin-top: 75px;*/
     margin: auto;
     padding: 0;
     justify-self: center;
@@ -407,7 +340,21 @@ section.contact {
     height: 550px;
     font-family: 'IBM Plex Sans Condensed', sans-serif;
     font-size: 1.1em;
+    background: url("../images/wallhaven-638675.jpg")no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 
+
+}
+
+section.contact a{
+    font-size: 20px;
+    color: ghostwhite;
+}
+
+section.contact a:hover{
+    color: #5eb5e0;
+    text-decoration: none;
 }
 .contact-list {
     margin-top: 75px;
@@ -517,10 +464,14 @@ footer p {
 
 .pesquet{
     margin-top: 20px;
+    text-align: justify;
+    font-size: 18px;
 }
 
 .safran {
     margin-top: 20px;
+    text-align: justify;
+    font-size: 18px;
 }
 
 .thumbnail{
@@ -537,6 +488,8 @@ footer p {
 
 .contenuArticle {
     margin-top: 20px;
+    text-align: justify;
+    font-size: 18px;
 }
 
 .titreArticle {
