@@ -541,3 +541,17 @@ footer p {
 .utilisateur {
     color:white;
 }
+
+.social-links {
+    width: 200px;
+    margin-left: 50px;
+}
+.twitter, .facebook, .google-plus {
+    width: 32px;
+    margin-left: 10px;
+    float: left;
+}
+
+.social-links img {
+    width: 32px;
+}
