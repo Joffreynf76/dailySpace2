@@ -4,9 +4,9 @@
             <div class="espace-utilisateur">
 
                 <div class="info-user">{% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                    <p>Votre email : {{ app.user.mail }}</p>
-                        <p>Votre nom :{{ app.user.nom }}</p>
-                        <p>Votre prénom :  {{ app.user.prenom }}</p>
+                    <p class="utilisateur">Votre email : {{ app.user.mail }}</p>
+                        <p class="utilisateur">Votre nom : {{ app.user.nom }}</p>
+                        <p class="utilisateur">Votre prénom :  {{ app.user.prenom }}</p>
                     {% if is_granted('ROLE_ADMIN') %}
                         <a href="{{ path('add_article') }}"><button>Ajouter un article</button></a>
                         <a href="{{ path('add_event') }}"><button>Ajouter un évenement</button></a>
