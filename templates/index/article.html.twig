@@ -1,0 +1,47 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<div class="container">
+    <h2 class="titreArticle">{{ article.titre}}</h2>
+
+    <img alt="image" src="{{ asset('images/'~article.image) }}" class="img-responsive img-rounded">
+<p class="contenuArticle">{{ article.contenu }}</p>
+
+
+
+<div class="commentaire">
+    <h3 class="titreComments">Espace commentaires :</h3>
+{% for commentaire in commentaires %}
+    <p class="titreComments">{{ commentaire.contenu }}</p>
+    {% endfor %}
+</div>
+{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+<div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+        <form class="form-horizontal" method="POST"
+              enctype="multipart/form-data">
+            <h3>Ajouter un commentaire</h3>
+
+
+            <div class="form-group">
+                <label class="col-md-2 control-label"></label>
+                <div class="col-md-8">
+                    {{ form_row(form.contenu) }}
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-xs-7 col-xs-offset-3">
+                    {{ form_end(form) }}
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+    {% else %}
+        <p>Veuillez vous <a href="{{ url('inscription') }}">inscrire</a> et/ou vous <a href="{{ url('security_connexion') }}">connecter</a> pour écrire un commentaire</p>
+{% endif %}
+</div>
+{% endblock %}

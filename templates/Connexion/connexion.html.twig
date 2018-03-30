@@ -1,0 +1,43 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+<div class="row">
+    <div class="col-xs-6 col-xs-push-3">
+        <h2 class="text-center">Connexion</h2>
+
+        {% if error %}
+            <div class="alert alert-danger">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                {{ error.messageKey|trans(error.messageData,'security') }}
+            </div>
+        {% endif %}
+
+
+
+        <form action="{{ path('security_connexion') }}"
+              method="POST" class="form-horizontal">
+
+            {# Email et Mot de Passe #}
+            <div class="form-group">
+                <div class="col-xs-6">
+                    <input name="_username" id="MAILUSERS"
+                           value="{{ last_mail }}"
+                           class="form-control" required type="email"
+                           placeholder="Saisissez votre Email">
+                </div>
+                <div class="col-xs-6">
+                    <input name="_password" id="MDPUSERS"
+                           class="form-control" required type="password"
+                           placeholder="*******">
+                </div>
+            </div>
+
+            <input type="hidden" name="_target_path" value="/accueil" />
+            {# Bouton Submit #}
+            <input type="submit" class="btn btn-block btn-primary"
+                   value="Connexion">
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}

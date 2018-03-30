@@ -1,0 +1,8 @@
+{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    <p>{{ app.user.mail }}</p>
+    <p>{{ app.user.nom }} {{ app.user.prenom }}</p>
+{% else %}
+    <li><a href="{{ url('security_connexion') }}">Connexion</a></li>
+    <li><a href="{{ url ('inscription') }}">Inscription</a></li>
+
+{% endif %}
